@@ -20,7 +20,7 @@ pipeline {
                 '''
             }
         }
-        stage('Test')
+        stage('Test'){
             agent{
                 docker{
                     image 'node:20.16.0-alpine'
@@ -33,5 +33,6 @@ pipeline {
                     npm test
                 '''
             }
+        }    
     }
 }
