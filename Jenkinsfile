@@ -44,7 +44,7 @@ pipeline {
                     reuseNode true
                 }
             }
-        }
+        
         steps{
             sh'''
                 npm install netlify-cli
@@ -53,6 +53,7 @@ pipeline {
                 node_modules/.bin/netlify status
                 node_modules/.bin/netlify deploy --prod --dir=build
             '''
+            }
         }
     }
 }
