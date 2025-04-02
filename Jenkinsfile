@@ -53,7 +53,7 @@ pipeline {
                     aws s3 ls
                     echo "Hello S3!" > index.html 
                     # aws s3 cp index.html s3://temp-20250402/index.html
-                    aws s3 sync build s3://amzn-s3-demo-bucket
+                    aws s3 sync build s3://temp-20250402
                 
                 '''
             }
