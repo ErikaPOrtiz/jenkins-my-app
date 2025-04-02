@@ -43,7 +43,7 @@ pipeline {
             }
         
         steps{
-            withCredentials([usernamePassword(credentialsId: 'my-temp', passwordVariable: 'AWS_SECRET_ACCES_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) 
+            withCredentials([usernamePassword(credentialsId: 'my-temp', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) 
             {
                 sh'''
                     aws --version 
