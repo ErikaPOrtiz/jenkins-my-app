@@ -13,12 +13,10 @@ pipeline {
             }
             steps {
                 sh '''
-                # list all files
                 ls -la
                 node --version
                 npm --version
-                # npm install
-                npm ci
+                npm ci --ignore-scripts || npm install --force
                 npm run build
                 ls -la
                 '''
